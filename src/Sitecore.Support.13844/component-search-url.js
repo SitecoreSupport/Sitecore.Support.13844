@@ -141,7 +141,7 @@
                     clearFacetName = facet.substring(facet.indexOf('_') + 1);
                     facetSignature = facet.substr(0, facet.indexOf('_'));
                     if (searchResultsSignature === facetSignature && specialParams.indexOf(clearFacetName) === -1) {
-                        url += "&" + clearFacetName + "=" + escape(clearIdData(dataProp[facet]));
+                        url += "&" + clearFacetName + "=" + encodeURI(clearIdData(dataProp[facet]));
                     }
                 }
             }
